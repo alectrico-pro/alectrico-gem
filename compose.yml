@@ -1,0 +1,16 @@
+volumes:
+  pg_data:
+  redis_data:
+  bundle:
+
+services:
+
+  gem:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - bundle:/usr/local/bundle
+    env_file:
+      - .env
+    environment:
+      - HISTFILE=/usr/src/app/log/.bash_history 
