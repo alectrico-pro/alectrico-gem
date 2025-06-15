@@ -1,0 +1,2 @@
+class Hickwall < ApplicationRecord
+end

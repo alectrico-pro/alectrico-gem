@@ -16,7 +16,10 @@ dummy:
 hickwall:
 	docker compose run --rm dummy bin/rails generate model Hickwall last_squawk:string
 
-
 wickwall:
 	docker compose run --rm dummy bin/rails generate model Wickwall last_squawk:string last_tweet:string
+
+
+migrate:
+	docker compose run --rm dummy bin/rails db:migrate
 

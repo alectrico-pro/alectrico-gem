@@ -1,0 +1,2 @@
+class Wickwall < ApplicationRecord
+end
