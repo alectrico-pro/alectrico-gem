@@ -1,19 +1,22 @@
 #Si cambio algo en modo local el digest será diferente de la gema publicada
 
-add_cert:
-	docker compose run --rm gem gem cert --add certs/alectrico.pem 
+.PHONY: test
+test:
+	docker compose run --rm dummy bin/test
 
-build:
-	docker compose run --rm gem gem build yaffle.gemspec 
+yaffle:
+	docker compose run --rm yaffle bash
 
-install:
-	docker compose run --rm gem gem install yaffle-0.1.1.gem -P HighSecurity 
 
-cert:
-	docker compose run --rm gem gem cert --list --gem 
 
-push:
-	docker compose run --rm gem gem push yaffle-0.1.1.gem 
+dummy:
+	docker compose run --rm dummy bash
 
-t:
-	docker compose run --rm gem bin/test
+
+hickwall:
+	docker compose run --rm dummy bin/rails generate model Hickwall last_squawk:string
+
+
+wickwall:
+	docker compose run --rm dummy bin/rails generate model Wickwall last_squawk:string last_tweet:string
+
