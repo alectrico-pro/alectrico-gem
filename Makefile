@@ -2,8 +2,9 @@
 
 .PHONY: test
 test:
-	docker compose run --rm dummy bin/test
+	docker compose run --rm yaffle bin/test
 
+.PHONY: yaffle
 yaffle:
 	docker compose run --rm yaffle bash
 

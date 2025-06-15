@@ -1,3 +1,6 @@
 class ApplicationRecord < ActiveRecord::Base
-  primary_abstract_class
+  include Yaffle::ActsAsYaffle
+  
+  self.abstract_class = true
+  # primary_abstract_class
 end
