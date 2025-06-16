@@ -39,5 +39,11 @@ owner:
 	docker compose run --rm alectrico gem owner alectrico --add alectrico®
 
 push:
-	docker compose run --rm alectrico gem push pkg/alectrico-0.1.1.gem
+	docker compose run --rm alectrico gem push pkg/alectrico-0.1.2.gem
+
+
+#el modelo no puede existir en la app 
+#Debe ser porque usa la misma base de datos
+juguete:
+	docker compose run --rm dummy bin/rails generate model Juguete link_de_pago_tbk:string
 

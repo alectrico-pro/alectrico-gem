@@ -30,6 +30,22 @@ module Alectrico
         #y class_alectrico_text_field responde de acuerdo a cómo se le llame        
         write_attribute(self.class.alectrico_text_field, string.to_squawk)
       end
+
+      # prepara un link de pago tbk para cobrar
+      # un servicio en la clase que lo llame
+      # la clase de fijar el campo que lo va a
+      # recibir eso se hace
+      # colocando el hook acts_as_alectrico y colocando el nombre del
+      # campo que guardará el link en la tabla de ActiveRecord
+      # debe existir ese campo para que esto funcione
+      # debe existe el campo
+      # cuando el usario siga el link obtenido, se tomará el precio
+      # de la visita del colaborador para generar el link que vaya
+      # a transbank.cl
+      # @param [String] url
+      def tokeniza( url )
+        write_attribute(self.class.alectrico_text_field, url.post_tokeniza )
+      end
     end
   end
 end

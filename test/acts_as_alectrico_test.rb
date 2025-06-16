@@ -21,4 +21,10 @@ class ActsAsAlectricoTest < ActiveSupport::TestCase
     assert_equal "squawk! Hello World", wickwall.last_tweet
   end
 
+  def test_juguete_tokeniza_debe_llenar_link_de_pago_tbk
+    juguete = Juguete.new
+    juguete.tokeniza("https://www.alectrico.cl/reporte/11/link_de_pago_tbk")
+    assert_match /https:\/\/www.alectrico.cl\/reporte\/11\//, juguete.link_de_pago_tbk
+    #assert_equal "https://www.alectrico.cl/reporte/11/link_de_pago_tbk", juguete.link_de_pago_tbk
+  end
 end
