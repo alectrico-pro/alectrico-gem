@@ -1,24 +1,24 @@
-# Yaffle
-Provide acts_as_yaffle hook to your models.
+# Alectrico
+Provide acts_as_alectrico hook to your models.
 ## Usage
-Append act_as_yaffle to you model
+Append act_as_alectrico to you model
 to let your model respond to last_quack instance method
 
-Append acts_as_yaffle(:yaffle_text_field => :last_tweet)
+Append acts_as_alectrico(:alectrico_text_field => :last_tweet)
 to let yout model respond to last_tweet method 
 
 Method quack it is also included as instance methods of models that you
-are using with acts_as_yaffle hook.
+are using with acts_as_alectrico hook.
 
 
 
 ## Installation
 Add this line to your application's Gemfile:
-gem "yaffle"
+gem "alectrico"
 
 
 ```ruby
-gem "yaffle"
+gem "alectrico"
 ```
 
 And then execute:
@@ -28,7 +28,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install yaffle
+$ gem install alectrico
 ```
 
 ## Contributing
@@ -38,6 +38,6 @@ https://guides.rubyonrails.org/plugins.html
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## My version using docker compose
-https://github.com/alectrico-pro/yaffle
+https://github.com/alectrico-pro/alectrico
 
 

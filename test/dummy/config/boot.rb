@@ -1,6 +1,6 @@
-#Este Gemfile es el mismo de yaffle
+#Este Gemfile es el mismo de alectrico
 #Normalmente el GEmfile está en ../Gemfile
-#El lib tambíén está apuntando al lib de yaffle
+#El lib tambíén está apuntando al lib de alectrico
 # Set up gems listed in the Gemfile.
 ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../../../Gemfile", __dir__)
 

@@ -1,4 +1,4 @@
  desc "Ejemplo de task"
- task :yaffle do
+ task :alectrico do
    # Task goes here
  end

@@ -1,19 +1,19 @@
-module Yaffle
-  module ActsAsYaffle
+module Alectrico
+  module ActsAsAlectrico
     extend ActiveSupport::Concern
     class_methods do
       #class_methods es un hook proporcionado por extend ActiveSupport::Concern
       #que permite definir métodos de clases on the fly
-      #En este caso el métod act_as_yaffle se puede usar como hook al comienzo
+      #En este caso el método acts_as_alectrico se puede usar como hook al comienzo
       #de las clases que lo quieran usar
-      #El método en sí define un atribute de clase llamado yaffle_text_field
+      #El método en sí define un atribute de clase llamado alectrico_text_field
       #El cual tendrá como valor por defecto lo que se suministre como argumento
-      #Si se llama acts_as_yaffle sin argumentos se usará como default el valor
+      #Si se llama acts_as_alectrico sin argumentos se usará como default el valor
       #que tenga el valor por defecto que proporciona el método last_squack
-      #Pero si en opciones se ya colocado yaffle_test_field entonces se usará 
-      #el valor devuelo por el hash de optinoes con key yaffle_text_field
-      def acts_as_yaffle(options = {} )
-        cattr_accessor :yaffle_text_field, default: (options[:yaffle_text_field] || :last_squawk).to_s
+      #Pero si en opciones se ya colocado alectrico_test_field entonces se usará 
+      #el valor devuelo por el hash de optinoes con key alectrico_text_field
+      def acts_as_alectrico(options = {} )
+        cattr_accessor :alectrico_text_field, default: (options[:alectrico_text_field] || :last_squawk).to_s
       end
     end
     included do
@@ -25,10 +25,10 @@ module Yaffle
       #Este método squawk solo estará accesible como método de instancia
       #por virtude del uso del hook inluded.
       def squawk( string )
-        #escribe el valor string.to_squawk al atributo devuelto por self.class.yaffle_text_field
+        #escribe el valor string.to_squawk al atributo devuelto por self.class.alectrico_text_field
         #pero string.to_squawn ha sido sobrecargado (monkey patching en lib)
-        #y class_yaffle_text_field responde de acuerdo a cómo se le llame        
-        write_attribute(self.class.yaffle_text_field, string.to_squawk)
+        #y class_alectrico_text_field responde de acuerdo a cómo se le llame        
+        write_attribute(self.class.alectrico_text_field, string.to_squawk)
       end
     end
   end

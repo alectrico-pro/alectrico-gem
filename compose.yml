@@ -5,7 +5,7 @@ volumes:
 
 services:
 
-  yaffle:
+  alectrico:
     build: .
     volumes:
       - .:/usr/src/app

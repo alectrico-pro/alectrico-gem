@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    yaffle (0.1.0)
+    aectrico (0.1.0)
       rails (>= 8.0.2)
 
 GEM
@@ -236,10 +236,10 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
+  aectrico!
   puma
   rubocop-rails-omakase
   sqlite3
-  yaffle!
 
 BUNDLED WITH
    2.6.9

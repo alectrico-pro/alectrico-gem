@@ -2,11 +2,11 @@
 
 .PHONY: test
 test:
-	docker compose run --rm yaffle bin/test
+	docker compose run --rm alectrico bin/test
 
-.PHONY: yaffle
-yaffle:
-	docker compose run --rm yaffle bash
+.PHONY: alectrico
+alectrico:
+	docker compose run --rm alectrico bash
 
 
 
@@ -26,14 +26,17 @@ migrate:
 
 
 build: 
-	docker compose run --rm yaffle bundle exec rake build 
+	docker compose run --rm alectrico bundle exec rake build 
 
 install:
-	docker compose run --rm yaffle bundle exec rake install
+	docker compose run --rm alectrico bundle exec rake install
 
 release:
-	docker compose run --rm yaffle bundle exec rake release
+	docker compose run --rm alectrico bundle exec rake release
+
+owner:
+	docker compose run --rm alectrico gem owner alectrico --add alectrico®
 
 push:
-	docker compose run --rm yaffle gem push pkg/yaffle-0.1.0.gem
+	docker compose run --rm alectrico gem push pkg/alectrico-0.1.0.gem
 

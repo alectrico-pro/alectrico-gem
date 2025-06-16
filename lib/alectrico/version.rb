@@ -1,3 +1,3 @@
-module Yaffle
+module Alectrico
   VERSION = "0.1.0"
 end

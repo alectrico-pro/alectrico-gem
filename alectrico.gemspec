@@ -1,8 +1,8 @@
-require_relative "lib/yaffle/version"
+require_relative "lib/alectrico/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "yaffle"
-  spec.version     = Yaffle::VERSION
+  spec.name        = "aectrico"
+  spec.version     = Alectrico::VERSION
   spec.authors     = [ "alectrico®" ]
   spec.email       = [ "alectrico@outlook.cl" ]
   spec.homepage    = "http://www.alectrico.cl"

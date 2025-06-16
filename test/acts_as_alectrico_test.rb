@@ -1,12 +1,12 @@
 require "test_helper"
 
-class ActsAsYaffleTest < ActiveSupport::TestCase
-  def test_a_hickwalls_yaffle_text_field_should_be_last_squawk
-    assert_equal "last_squawk", Hickwall.yaffle_text_field
+class ActsAsAlectricoTest < ActiveSupport::TestCase
+  def test_a_hickwalls_alectrico_text_field_should_be_last_squawk
+    assert_equal "last_squawk", Hickwall.alectrico_text_field
   end
 
-  def test_a_wickwalls_yaffle_text_field_should_be_last_tweet
-    assert_equal "last_tweet", Wickwall.yaffle_text_field
+  def test_a_wickwalls_alectrico_text_field_should_be_last_tweet
+    assert_equal "last_tweet", Wickwall.alectrico_text_field
   end
 
   def test_hicwalls_squawk_should_populate_last_squawk
