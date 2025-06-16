@@ -24,6 +24,9 @@ wickwall:
 migrate:
 	docker compose run --rm dummy bin/rails db:migrate
 
+console:
+	docker compose run --rm dummy bin/rails console
+
 
 build: 
 	docker compose run --rm alectrico bundle exec rake build 
@@ -39,7 +42,7 @@ owner:
 	docker compose run --rm alectrico gem owner alectrico --add alectrico®
 
 push:
-	docker compose run --rm alectrico gem push pkg/alectrico-0.1.2.gem
+	docker compose run --rm alectrico gem push pkg/alectrico-0.1.3.gem
 
 
 #el modelo no puede existir en la app 

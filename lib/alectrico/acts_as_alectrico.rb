@@ -42,9 +42,15 @@ module Alectrico
       # cuando el usario siga el link obtenido, se tomará el precio
       # de la visita del colaborador para generar el link que vaya
       # a transbank.cl
-      # @param [String] url
-      def tokeniza( url )
-        write_attribute(self.class.alectrico_text_field, url.post_tokeniza )
+      # @param [String] url args to url_helpers
+      # @param [Numeric] id id of model
+      # url has to be :tbk_api_v1_electrico_reporte_url
+      #
+      def tokeniza( action_url)
+       # url = Rails.application.routes.url_helpers.send( url.to_sym, self.id, :only_path => true )
+        #rite_attribute(self.class.alectrico_text_field, url.post_tokeniza(self.id))
+        write_attribute(self.class.alectrico_text_field, self.id.to_s.tokeniza( action_url ))
+
       end
     end
   end

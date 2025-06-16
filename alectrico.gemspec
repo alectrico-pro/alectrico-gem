@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 5.0.0"
+  spec.add_dependency "jwt", '>= 2.2.1'
 end

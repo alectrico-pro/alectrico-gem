@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :juguetes do
+    member do
+      get :link_de_pago_tbk
+    end
+  end
+
 end
