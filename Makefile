@@ -34,4 +34,6 @@ install:
 release:
 	docker compose run --rm yaffle bundle exec rake release
 
+push:
+	docker compose run --rm yaffle gem push pkg/yaffle-0.1.0.gem
 
