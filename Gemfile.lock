@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    aectrico (0.1.0)
+    alectrico (0.1.1)
       rails (>= 8.0.2)
 
 GEM
@@ -236,7 +236,7 @@ PLATFORMS
   x86_64-linux-gnu
 
 DEPENDENCIES
-  aectrico!
+  alectrico!
   puma
   rubocop-rails-omakase
   sqlite3
