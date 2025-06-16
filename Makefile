@@ -24,3 +24,14 @@ wickwall:
 migrate:
 	docker compose run --rm dummy bin/rails db:migrate
 
+
+build: 
+	docker compose run --rm yaffle bundle exec rake build 
+
+install:
+	docker compose run --rm yaffle bundle exec rake install
+
+release:
+	docker compose run --rm yaffle bundle exec rake release
+
+
