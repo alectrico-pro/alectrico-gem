@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/alectrico.svg)](https://badge.fury.io/rb/alectrico)
 # Alectrico
 Provide acts_as_alectrico hook to your models.
 ## Usage
