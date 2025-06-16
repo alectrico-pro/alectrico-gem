@@ -32,12 +32,8 @@ $ gem install alectrico
 ```
 
 ## Contributing
-https://guides.rubyonrails.org/plugins.html
+alectrico®
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## My version using docker compose
-https://github.com/alectrico-pro/alectrico
-
 

@@ -31,6 +31,7 @@ build:
 install:
 	docker compose run --rm alectrico bundle exec rake install
 
+#da un error de que no ha sido commited
 release:
 	docker compose run --rm alectrico bundle exec rake release
 
@@ -38,5 +39,5 @@ owner:
 	docker compose run --rm alectrico gem owner alectrico --add alectrico®
 
 push:
-	docker compose run --rm alectrico gem push pkg/alectrico-0.1.0.gem
+	docker compose run --rm alectrico gem push pkg/alectrico-0.1.1.gem
 
