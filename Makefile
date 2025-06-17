@@ -21,8 +21,16 @@ dummy:
 show_credenciales:
 	docker compose run --rm dummy bundle exec bin/rails credentials:show
 
-edit_credenciales:
+crear_credenciales:
 	docker compose run --rm dummy bundle exec bin/rails credentials:edit
+
+#https://webcrunch.com/posts/the-complete-guide-to-ruby-on-rails-encrypted-credentials
+#RAILS_ENV=production EDITOR="code --wait" rails credentials:edit
+editar_credenciales:
+	docker compose run --rm dummy bash
+#en el bash arriba ejecutar
+#Dockerifle debe tener instalado vim
+#EDITOR=vim rails credentials:edit
 
 
 #No $VISUAL or $EDITOR to open file in. Assign one like this:
