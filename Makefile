@@ -1,5 +1,7 @@
 #Si cambio algo en modo local el digest será diferente de la gema publicada
 
+
+#===== app alectrico (es gema alectrico) ======================
 .PHONY: test
 test:
 	docker compose run --rm alectrico bin/test
@@ -8,10 +10,27 @@ test:
 alectrico:
 	docker compose run --rm alectrico bash
 
+#=== dummy =====
 
 
 dummy:
 	docker compose run --rm dummy bash
+
+
+#credenciales de la app dummy
+show_credenciales:
+	docker compose run --rm dummy bundle exec bin/rails credentials:show
+
+edit_credenciales:
+	docker compose run --rm dummy bundle exec bin/rails credentials:edit
+
+
+#No $VISUAL or $EDITOR to open file in. Assign one like this:
+
+#VISUAL="code --wait" bin/rails credentials:edit
+
+#For editors that fork and exit immediately, it's important to pass a wait flag;
+#otherwise, the file will be saved immediately with no chance to edit.
 
 
 hickwall:
@@ -26,6 +45,7 @@ migrate:
 
 console:
 	docker compose run --rm dummy bin/rails console
+
 
 
 build: 
