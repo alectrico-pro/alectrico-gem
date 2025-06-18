@@ -55,7 +55,8 @@ console:
 	docker compose run --rm dummy bin/rails console
 
 
-
+#Cambiar la version en lib/version
+#Antes de hacer push, usar la última version
 build: 
 	docker compose run --rm alectrico bundle exec rake build 
 
@@ -69,8 +70,11 @@ release:
 owner:
 	docker compose run --rm alectrico gem owner alectrico --add alectrico®
 
+#antes de usar push, verificar cuál es la última version en pkg
+#y anotarla aquí
+#ir a santum y cambiar el Gemfile para gem "alectrico" path
 push:
-	docker compose run --rm alectrico gem push pkg/alectrico-0.1.3.gem
+	docker compose run --rm alectrico gem push pkg/alectrico-0.1.4.gem
 
 
 #el modelo no puede existir en la app 
