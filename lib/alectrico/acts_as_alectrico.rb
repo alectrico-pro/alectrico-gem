@@ -46,10 +46,10 @@ module Alectrico
       # @param [Numeric] id id of model
       # url has to be :tbk_api_v1_electrico_reporte_url
       #
-      def tokeniza( action_url)
+      def tokeniza( action_url, host )
        # url = Rails.application.routes.url_helpers.send( url.to_sym, self.id, :only_path => true )
         #rite_attribute(self.class.alectrico_text_field, url.post_tokeniza(self.id))
-        write_attribute(self.class.alectrico_text_field, self.id.to_s.tokeniza( action_url ))
+        write_attribute(self.class.alectrico_text_field, self.id.to_s.tokeniza( action_url, host ))
 
       end
     end

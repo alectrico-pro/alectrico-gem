@@ -24,7 +24,7 @@ class ActsAsAlectricoTest < ActiveSupport::TestCase
   def test_juguete_tokeniza_debe_llenar_link_de_pago_tbk
     juguete = Juguete.new
     juguete.save
-    juguete.tokeniza( 'link_de_pago_tbk_juguete_url' )
+    juguete.tokeniza( 'link_de_pago_tbk_juguete_url', 'https://www.example.com' )
     puts juguete.link_de_pago_tbk
     assert_match /s*/, juguete.link_de_pago_tbk
    #juguete.tokeniza("https://www.alectrico.cl/reporte/11/link_de_pago_tbk")

@@ -1,5 +1,4 @@
-require 'jwt'
-
+require 'base64'
 class String
   
   #Esto es una sobrecarga de la clase String que agrega 
@@ -8,23 +7,18 @@ class String
   def to_squawk
     "squawk! #{self}".strip
   end
-
-  # 
-  def post_tokeniza_v1( model_id )
-    payload = { id: model_id }
-    token   = JWT.encode(payload, nil, 'none')
-    "#{self}#{token}".strip
-  end
   
   #self es el id de un modelo
-  def tokeniza( action_url )
-    #puts "en tokeniza de String"
-    #puts action_url
+  def tokeniza( action_url, host )
+    puts "en tokeniza de String"
+    puts "action_url: "
+    puts action_url
     id = self.to_i
-    payload = { id: id }
-    token   = JWT.encode(payload, nil, 'none')
+    puts "id: "
+    puts id
+    token   = Base64::encode64( id.to_s )
     begin
-      Rails.application.routes.url_helpers.send( action_url.to_sym, token, :only_path => true )
+      Rails.application.routes.url_helpers.send( action_url.to_sym, token, :only_path => false, :host => host )
     rescue NoMethodError => e
       puts "Hay un error, #{action_url} no se puede usar en su modelo"
       puts "Debe usar este hook en su modelo:"
