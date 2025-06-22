@@ -6,6 +6,11 @@
 test:
 	docker compose run --rm alectrico bin/test
 
+rake:
+	docker compose run --rm alectrico rake --tasks
+
+
+
 .PHONY: alectrico
 alectrico:
 	docker compose run --rm alectrico bash
@@ -35,7 +40,7 @@ editar_credenciales:
 
 #No $VISUAL or $EDITOR to open file in. Assign one like this:
 
-#VISUAL="code --wait" bin/rails credentials:edit
+#EDITOR=vim bin/rails credentials:edit
 
 #For editors that fork and exit immediately, it's important to pass a wait flag;
 #otherwise, the file will be saved immediately with no chance to edit.

@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in yaffle.gemspec.
 gemspec
+#gemspec name: 'alectrico'
+#emspec name: 'alectrico-tbk'
 
 gem "puma"
 
